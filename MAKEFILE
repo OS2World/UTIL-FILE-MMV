@@ -1,0 +1,10 @@
+mmv:	mmv.c
+	$(CC) -o mmv $(CFLAGS) mmv.c
+
+install:	all
+	@echo "Install mmv according to local convention,"
+	@echo "then make links named mcp, mad, and mln to mmv."
+	@echo "Under System V, edit mmv.1 to uncomment the .nr O 1 line."
+
+clean:
+	rm -f core a.out mmv mmv.o
